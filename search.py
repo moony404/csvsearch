@@ -1,9 +1,9 @@
 import csv
 import pandas as pd
 from colorama import Fore
-def chercher_mot_dans_csv(nom_fichier, mot):
+def chercher_mot_dans_csv(file_name, mot):
     try:
-        with open(nom_fichier, mode='r', encoding='utf-8') as file:
+        with open(file_name, mode='r', encoding='utf-8') as file:
             reader = csv.reader(file)
             header = next(reader)
             result = []
@@ -19,7 +19,8 @@ def chercher_mot_dans_csv(nom_fichier, mot):
                         print(f"{Fore.WHITE}")
         return f"Mot '{mot}' non trouvé dans le fichier."
     except FileNotFoundError:
-        return f"Le fichier '{nom_fichier}' n'a pas été trouvé."
+        # return f"Le fichier '{file_name}' n'a pas été trouvé."
+        print(f"{Fore.BLUE}[{Fore.RED}error{Fore.BLUE}] {Fore.YELLOW}The file '{file_name}' was not found.{Fore.WHITE}")
 # settings
 file_name = 'samples\\LGE_File config.csv'
 search_keyword = '\\'
