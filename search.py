@@ -22,6 +22,6 @@ def chercher_mot_dans_csv(file_name, search_keyword):
         print(f"{Fore.BLUE}[{Fore.RED}error{Fore.BLUE}] {Fore.YELLOW}The file {Fore.WHITE}'{file_name}'{Fore.YELLOW} wasn't found.{Fore.WHITE}")
 # settings
 file_name = 'xml\\example.xml'
-search_keyword = 'un'
+search_keyword = '2'
 result = chercher_mot_dans_csv(file_name, search_keyword)
 print(result)
