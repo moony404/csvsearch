@@ -17,12 +17,11 @@ def chercher_mot_dans_csv(file_name, search_keyword):
                         print("row count : ", end='')
                         print(row.count)
                         print(f"{Fore.WHITE}")
-        return f"Mot '{search_keyword}' non trouvé dans le fichier."
         print(f"{Fore.BLUE}[notice] {Fore.YELLOW}The word {Fore.WHITE}'{search_keyword}'{Fore.YELLOW} wasn't found.{Fore.WHITE}")
     except FileNotFoundError:
         print(f"{Fore.BLUE}[{Fore.RED}error{Fore.BLUE}] {Fore.YELLOW}The file {Fore.WHITE}'{file_name}'{Fore.YELLOW} wasn't found.{Fore.WHITE}")
 # settings
-file_name = 'samples\\LGE_File config.csv'
-search_keyword = '\\'
+file_name = 'xml\\example.xml'
+search_keyword = 'un'
 result = chercher_mot_dans_csv(file_name, search_keyword)
 print(result)
