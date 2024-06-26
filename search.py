@@ -20,8 +20,8 @@ def chercher_mot_dans_csv(nom_fichier, mot):
         return f"Mot '{mot}' non trouvé dans le fichier."
     except FileNotFoundError:
         return f"Le fichier '{nom_fichier}' n'a pas été trouvé."
-# variables
-nom_fichier = 'samples\\LGE_File config.csv'
-mot = '\\'
-resultat = chercher_mot_dans_csv(nom_fichier, mot)
-print(resultat)
+# settings
+file_name = 'samples\\LGE_File config.csv'
+search_keyword = '\\'
+result = chercher_mot_dans_csv(file_name, search_keyword)
+print(result)
